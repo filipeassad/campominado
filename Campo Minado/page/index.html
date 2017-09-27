@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Campo Minado</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">	
+	<script src="../scripts/cronometro.js"></script>
+	<script src="../scripts/index.js"></script>
+</head>
+<body onload="criaTabuleiro()" style="background-color: #555a60;">
+
+	<div class="container-fluid">
+
+		<div class="row" style="background-color: #403f45;">
+			<div class="col-md-4">
+				<h1>Campo Minado</h1>
+			</div>
+			<div class="col-md-8" style="height: 50px; text-align: right;" >
+				<img src="../img/timeCapivara.png" height="80%" style="margin-top: 5px; margin-right: 10px;" >				
+			</div>
+		</div>
+
+		<div class="row" style="">
+			<div class="col-md-3">
+				<div style="margin-top: 50px; width: 100%; text-align: center; font-size: 30px;">Tempo</div>
+				<div id="tempo">
+					<div class="inline-middle" id="Horas">00</div>
+					<div class="inline-middle" id="Minutos">:00</div>
+					<div class="inline-middle" id="Segundos">:00</div>
+					<div class="inline-middle" id="Centesimas">:00</div>
+				</div>
+				<div id="btn-recomecar" onclick="criaTabuleiro()">RECOMEÇAR</div>
+			</div>
+			<div class="col-md-6">
+				<div id="campo"></div>
+				<div id="resultado"></div>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+
+
+	</div>
+
+</body>
+</html>
