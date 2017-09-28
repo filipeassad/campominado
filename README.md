@@ -28,29 +28,18 @@ O tabuleiro é totalmente dinamico, ele é inserido atravez de javascript assim 
 
 ### Estrutura do projeto
 
-|Campo Minado
-
-|    |-- css
-
-|        |-- index.css
-
-|    |-- img
-
-|        |-- flag.png
-
-|        |-- mine.png
-
-|        |-- timeCapivara.png
-
-|    |-- page
-
-|        |-- index.html
-
-|    |-- scripts
-
-|        |-- cronometro.js
-
-|        |-- index.js
+|Campo Minado  
+|----|-- css  
+|--------|-- index.css  
+|----|-- img  
+|--------|-- flag.png  
+|--------|-- mine.png  
+|--------|-- timeCapivara.png  
+|----|-- page  
+|--------|-- index.html  
+|----|-- scripts  
+|--------|-- cronometro.js  
+|--------|-- index.js  
 
 
 #### Sabendo disso, segue a explicação de alguns metodos do index.js:
