@@ -28,6 +28,8 @@ O tabuleiro é totalmente dinamico, ele é inserido atravez de javascript assim 
 
 Sabendo disso, segue a explicação de alguns metodos:
 
+#### criaTabuleiro()
+
 ```js
 function criaTabuleiro() {
 
@@ -48,9 +50,10 @@ function criaTabuleiro() {
 	for(i = 0; i < 10; i++){
 		for(j = 0; j < 15; j++){
 			var nome = i + "-" +  j;
-			campo.innerHTML += '<div class="quadrado bg-amarelo inline-top" '+ 
-									'id="campo' + nome +'" '+
-									'onclick="clicaCampo(\''+nome+'\')" ></div>';	
+			campo.innerHTML += 
+			'<div class="quadrado bg-amarelo inline-top" '+ 
+				'id="campo' + nome +'" '+
+				'onclick="clicaCampo(\''+nome+'\')" ></div>';	
 		}
 		campo.innerHTML += '</br>';
 	}
@@ -59,13 +62,17 @@ function criaTabuleiro() {
 
 }
 ```
+Esse método inicializa todo o jogo. O método estancia as listas presentes no projeto e deixa as variaveis globais no seu modo default. Após a inicialização, a função chama a "geraBombas()" que popula a lista de bombas com as posições das bombas geradas. Em seguida é percorrido o tamanho da matriz adcionando cada campo do tabuleiro. Os campos são representados por um "<div>" com o identificado feito através de sua posição, também é setado uma função "clicaCampo()" dentro metodo "onclick". A função "clicaCampo()" espera como parametro uma String com a posição do campo para o mesmo ser identificado posteriormente. Por fim o metodo gera o cronometro.
+
+#### geraBombas()
 
 ```js
 function geraBombas(){
 	for(i=0; i < (Math.floor((Math.random() * 10)) + 1 ) + 4; i++){
 		var busca = true;
 		while(busca){
-			var resultado = Math.floor((Math.random() * 10)) + "-" + Math.floor((Math.random() * 15));
+			var resultado = Math.floor((Math.random() * 10)) + 
+					"-" + Math.floor((Math.random() * 15));
 			if(!buscaLista(resultado, bombas)){
 				bombas[i] = resultado;
 				busca = false;
@@ -74,6 +81,8 @@ function geraBombas(){
 	}
 }
 ```
+
+#### clicaCampo(numero)
 
 ```js
 function clicaCampo(numero){
@@ -111,6 +120,8 @@ function clicaCampo(numero){
 	
 }
 ```
+#### verificaZeros(valor)
+
 ```js
 function verificaZeros(valor){
 	var vetor = valor.split("-");
