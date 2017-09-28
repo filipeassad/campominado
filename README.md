@@ -28,7 +28,7 @@ O tabuleiro é totalmente dinamico, ele é inserido atravez de javascript assim 
 
 ### Estrutura do projeto
 
-|Campo Minado  
+| Campo Minado  
 |----|-- css  
 |--------|-- index.css  
 |----|-- img  
