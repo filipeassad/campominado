@@ -62,7 +62,7 @@ function criaTabuleiro() {
 
 }
 ```
-Esse método inicializa todo o jogo. O método estancia as listas presentes no projeto e deixa as variaveis globais no seu modo default. Após a inicialização, a função chama a "geraBombas()" que popula a lista de bombas com as posições das bombas geradas. Em seguida é percorrido o tamanho da matriz adcionando cada campo do tabuleiro. Os campos são representados por um "<div>" com o identificado feito através de sua posição, também é setado uma função "clicaCampo()" dentro metodo "onclick". A função "clicaCampo()" espera como parametro uma String com a posição do campo para o mesmo ser identificado posteriormente. Por fim o metodo gera o cronometro.
+Esse método inicializa todo o jogo. O método estancia as listas presentes no projeto e deixa as variaveis globais no seu modo default. Após a inicialização, a função chama a "geraBombas()" que popula a lista de bombas com as posições das bombas geradas. Em seguida é percorrido o tamanho da matriz adcionando cada campo do tabuleiro. Os campos são representados por um "div" com o identificado feito através de sua posição, também é setado uma função "clicaCampo()" dentro metodo "onclick". A função "clicaCampo()" espera como parametro uma String com a posição do campo para o mesmo ser identificado posteriormente. Por fim o metodo gera o cronometro.
 
 #### geraBombas()
 
